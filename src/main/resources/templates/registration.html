@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Demosite registration</title>
+</head>
+<body>
+<h1>Register</h1>
+<div th:if="${error}">
+    Unable to register. Try again
+</div>
+<form method="POST" th:action="@{/register}" id="registerForm">
+    <input type="hidden" name="_csrf" th:value="${_csrf.token}"/>
+    <label for="username">Username: </label>
+    <input type="text" name="username"/><br/>
+    <label for="password">Password: </label>
+    <input type="password" name="password"/><br/>
+    <label for="confirm">Confirm password: </label>
+    <input type="password" name="confirm"/><br/>
+    <input type="submit" value="Register"/>
+</form>
+</body>
+</html>
