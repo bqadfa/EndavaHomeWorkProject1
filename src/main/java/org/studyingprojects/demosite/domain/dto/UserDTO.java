@@ -24,7 +24,7 @@ public class UserDTO {
         if (!confirm.equals(password)) {
             throw new IllegalArgumentException("Passwords should match, boi");
         }
-        return new User(username passwordEncoder.encode(password));
+        return new User(username, passwordEncoder.encode(password));
     }
 
 }

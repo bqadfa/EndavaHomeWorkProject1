@@ -13,7 +13,7 @@ public class SiteController {
 
     @GetMapping(value = "/")
     public String welcomePage() {
-        return "welcome page";
+        return "home";
     }
 
     @GetMapping(value = "/login")
